@@ -1,0 +1,13 @@
+{
+  "name": "syp-revealjs-demo",
+  "private": true,
+  "scripts": {
+    "start": "browser-sync start --server --files \"index.html\" \"slides.md\" \"images/**\" --port 8000 --no-notify"
+  },
+  "dependencies": {
+    "reveal.js": "^6.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
+  }
+}

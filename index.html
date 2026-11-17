@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentations with Markdown and reveal.js</title>
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+  <!-- Theme: white, black, league, beige, night, serif, simple, solarized, moon, dracula, sky, blood -->
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
+  <!-- Colours for code examples: monokai or zenburn -->
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/plugin/highlight/monokai.css">
+  <style>
+    /* two columns: <div class="columns"> with two <div> inside */
+    .reveal .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- The slides are in slides.md. -->
+      <section data-markdown="slides.md"
+               data-separator="^\r?\n---\r?\n$"
+               data-separator-vertical="^\r?\n--\r?\n$"
+               data-separator-notes="^Note:">
+      </section>
+    </div>
+  </div>
+
+  <script src="node_modules/reveal.js/dist/reveal.js"></script>
+  <script src="node_modules/reveal.js/dist/plugin/markdown.js"></script>
+  <script src="node_modules/reveal.js/dist/plugin/highlight.js"></script>
+  <script src="node_modules/reveal.js/dist/plugin/notes.js"></script>
+  <script src="node_modules/reveal.js/dist/plugin/zoom.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom]
+    });
+  </script>
+</body>
+</html>

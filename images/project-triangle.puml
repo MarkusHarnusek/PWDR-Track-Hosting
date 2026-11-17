@@ -1,0 +1,20 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam rectangle {
+  BackgroundColor #EAF2FB
+  BorderColor #2B6CB0
+  RoundCorner 12
+}
+rectangle "**SCOPE**\nwhat is built" as U
+rectangle "**TIME**\nwhen it is finished" as Z
+rectangle "**RESOURCES**\npeople, money, equipment" as R
+U -down- Z
+U -down- R
+Z -right- R
+note as Q
+  Quality is not a fourth corner –
+  it is silently sacrificed
+  when all three corners are fixed.
+end note
+Z -[hidden]down- Q
+@enduml
